@@ -9,7 +9,6 @@
 ;; Localeに合わせた環境の設定
 (set-locale-environment nil)
 
-
 ;;; キーバインド
 ;; 基本
 (define-key global-map (kbd "M-?") 'help-for-help)        ; ヘルプ
@@ -74,6 +73,7 @@
 ;; デフォルトで視覚化を有効にする。
 (global-whitespace-mode 1)
 
+;; 色の設定
 (defvar my/bg-color "#232323")
 (set-face-attribute 'whitespace-trailing nil
                     :background my/bg-color
@@ -89,6 +89,8 @@
                     :weight 'bold)
 (set-face-attribute 'whitespace-empty nil
                     :background my/bg-color)
+(set-face-foreground 'font-lock-comment-face "red") ;コメント行
+
 
 ;;; 位置
 ;; 現在行を目立たせる
