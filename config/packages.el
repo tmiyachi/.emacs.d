@@ -5,10 +5,10 @@
 ;; | (el-get 'sync '(パッケージ名))
 ;; | ...パッケージの設定
 ;;
-;; 設定が長くなる場合は「config/packages/パッケージ名.el」というファイルをつくってそこに記述。
+;; 設定が長くなる場合は「packages/パッケージ名.el」というファイルをつくってそこに記述。
 ;;
 ;; | ;;; パッケージ名
-;; | (load "config/packages/パッケージ名")
+;; | (load "packages/パッケージ名")
 ;;
 ;;
 
@@ -33,35 +33,35 @@
 ;;; auto Complete
 ;; 自動補完
 (el-get 'sync '(auto-complete))
-(load "config/packages/auto-complete.el")
+(load "packages/auto-complete.el")
 
 
 ;;; scss-mode
 ;; Scss(Sass)言語モード
 (el-get 'sync '(scss-mode))
-(load "config/packages/scss-mode.el")
+(load "packages/scss-mode.el")
 
 
 ;;; js2-mode
 ;; JavaScript言語モード
 (el-get 'sync '(js2-mode))
-(load "config/packages/js2-mode.el")
+(load "packages/js2-mode.el")
 
 ;;; php-mode
 ;; PHP言語モード
 (el-get 'sync '(php-mode))
-(load "config/packages/php-mode.el")
+(load "packages/php-mode.el")
 
 ;;; web-mode
 ;;
 (el-get 'sync '(web-mode))
-(load "config/packages/web-mode.el")
+(load "packages/web-mode.el")
 
 ;;; coffee-mode
 ;; CoffeeScript
 (el-get 'sync '(coffee-mode))
-(load "config/packages/coffee-mode.el")
+(load "packages/coffee-mode.el")
 
 ;;; python-mode
 ;;(el-get 'sync '(python-mode))
-;;(load "config/packages/python-mode.el")
+;;(load "packages/python-mode.el")

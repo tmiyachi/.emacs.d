@@ -1,7 +1,7 @@
 ;;; ロードパス
 ;; ロードパスの追加
 (setq load-path (append
-                 '("~/.emacs.d")
+                 '("~/.emacs.d/config")
                  load-path))
 
 
@@ -151,6 +151,6 @@
 
 ;;; 追加の設定
 ;; 標準Elisp（Emacs標準搭載のElisp）の設定
-(load "config/builtins")
+(load "builtins")
 ;; 非標準Elisp（Emacs非標準搭載のElisp）の設定
-(load "config/packages")
+(load "packages")
