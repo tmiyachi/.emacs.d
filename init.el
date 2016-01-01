@@ -141,14 +141,6 @@
 ;; diffのオプション
 (setq diff-switches '("-u" "-p" "-N"))
 
-
-;;;
-;; 先頭行に!#があるファイルを保存すると実行権をつける
-(add-hook 'after-save-hook
-          'executable-make-buffer-file-executable-if-script-p)
-
-
-
 ;;; 追加の設定
 ;; 標準Elisp（Emacs標準搭載のElisp）の設定
 (load "builtins")
