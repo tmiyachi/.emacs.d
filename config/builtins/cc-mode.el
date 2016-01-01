@@ -1,6 +1,5 @@
 ;;; cc-mode
 ;; C言語と同じような構文のプログラミング言語用の設定
-;; 2012-03-18
 
 ;; c-modeやc++-modeなどcc-modeベースのモード共通の設定
 (add-hook
@@ -19,4 +18,3 @@
    ;; 連続する空白の一括削除（hungry-delete）を
    ;; 有効にする
    (c-toggle-auto-hungry-state 1)))
-
