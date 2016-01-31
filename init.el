@@ -95,6 +95,10 @@
 ;;; 位置
 ;; 現在行を目立たせる
 (global-hl-line-mode)
+;; ハイライトする色
+(custom-set-faces
+ '(hl-line ((t (:background "color-236"))))
+ )
 ;; カーソルの位置が何文字目かを表示する
 (column-number-mode t)
 ;; カーソルの位置が何行目かを表示する
