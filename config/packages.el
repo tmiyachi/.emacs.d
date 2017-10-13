@@ -62,6 +62,10 @@
 (el-get 'sync '(coffee-mode))
 (load "packages/coffee-mode.el")
 
-;;; python-mode
-;;(el-get 'sync '(python-mode))
-;;(load "packages/python-mode.el")
+;;; swig-mode
+(el-get 'sync '(swig-mode))
+(add-to-list 'auto-mode-alist '("\\.i$" . swig-mode))
+
+;;; NCAR command language mode
+(el-get 'sync '(ncl-mode))
+(add-to-list 'auto-mode-alist '("\\.ncl$" . ncl-mode))
