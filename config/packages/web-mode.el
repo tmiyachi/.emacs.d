@@ -36,3 +36,9 @@
  '(web-mode-css-at-rule-face
    ((t (:foreground "#FF7F00"))))                          ; cssのタグ
  )
+
+;;; djangoのtemplateへの対応
+(setq web-mode-engines-alist
+      '(
+        ("django" . "\\.html\\'")
+        ))
