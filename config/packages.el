@@ -1,6 +1,11 @@
-;;; 非標準搭載のElispの設定
-;; パッケージはel-getを使って管理する。導入するパッケージはこのファイルに次の書式で書けばいい。
+;; パッケージはpackage.elもしくはel-getを使って管理する。
+;; 導入するパッケージはこのファイルに次の書式で書けばいい。
 ;;
+;; * package.elを利用する場合 *
+;; | ;;; パッケージ名
+;; | (package-ensure-install 'パッケージ名)
+;;
+;; * el-getを利用する場合*
 ;; | ;;; パッケージ名
 ;; | (el-get 'sync '(パッケージ名))
 ;; | ...パッケージの設定
@@ -11,6 +16,25 @@
 ;; | (load "packages/パッケージ名")
 ;;
 ;;
+
+;;; package.el
+;; Emacs標準のパッケージ管理システム
+(require 'package)
+
+;; MELPAからもインストール
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/")
+             t)
+;; 初期化
+(package-initialize)
+;; 初回起動時はパッケージリストを更新
+(unless package-archive-contents
+  (package-refresh-contents))
+
+;; インストールされていなかったらインストールする関数
+(defun package-ensure-install (name)
+  (unless (package-installed-p name)
+        (package-install name)))
 
 
 ;;; el-get
