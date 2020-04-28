@@ -106,5 +106,5 @@
       (let ((help (get-char-property (point) 'help-echo)))
         (if help (message "%s" help)))))
   (add-hook 'post-command-hook 'flymake-show-help)
-  (setq flymake-python-pyflakes-extra-arguments '("--ignore=W806"))
+  (setq flymake-python-pyflakes-extra-arguments '("--ignore=D,W293,W503" "--max-complexity=20" "--max-line-length=150"))
 )
