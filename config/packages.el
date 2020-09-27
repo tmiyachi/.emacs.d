@@ -21,10 +21,12 @@
 ;; Emacs標準のパッケージ管理システム
 (require 'package)
 
-;; MELPAからもインストール
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/")
-             t)
+;; パッケージリストを上書き
+(setq package-archives
+      '(("melpa" . "https://melpa.org/packages/")
+        ("org" . "https://orgmode.org/elpa/")
+        ("gnu" . "https://elpa.gnu.org/packages/")))
+
 ;; 初期化
 (package-initialize)
 ;; 初回起動時はパッケージリストを更新
@@ -95,7 +97,7 @@
 (add-to-list 'auto-mode-alist '("\\.ncl$" . ncl-mode))
 
 ;;; python-mode with flake8
-(package-ensure-install 'flymake-easy)
+(package-ensure-install 'flymake)
 (package-ensure-install 'flymake-python-pyflakes)
 (when (executable-find "flake8")
   (require 'flymake-python-pyflakes)
