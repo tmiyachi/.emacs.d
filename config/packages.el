@@ -61,40 +61,10 @@
 (el-get 'sync '(auto-complete))
 (load "packages/auto-complete.el")
 
-
-;;; scss-mode
-;; Scss(Sass)言語モード
-(el-get 'sync '(scss-mode))
-(load "packages/scss-mode.el")
-
-
-;;; js2-mode
-;; JavaScript言語モード
-(el-get 'sync '(js2-mode))
-(load "packages/js2-mode.el")
-
-;;; php-mode
-;; PHP言語モード
-(el-get 'sync '(php-mode))
-(load "packages/php-mode.el")
-
 ;;; web-mode
 ;;
 (el-get 'sync '(web-mode))
 (load "packages/web-mode.el")
-
-;;; coffee-mode
-;; CoffeeScript
-(el-get 'sync '(coffee-mode))
-(load "packages/coffee-mode.el")
-
-;;; swig-mode
-(el-get 'sync '(swig-mode))
-(add-to-list 'auto-mode-alist '("\\.i$" . swig-mode))
-
-;;; NCAR command language mode
-(el-get 'sync '(ncl-mode))
-(add-to-list 'auto-mode-alist '("\\.ncl$" . ncl-mode))
 
 ;;; python-mode with flake8
 (package-ensure-install 'flymake)
