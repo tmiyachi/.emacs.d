@@ -12,3 +12,6 @@
 
 ;;; cc-mode
 (load "builtins/cc-mode")
+
+;;; ruby-mode
+(load "builtins/ruby-mode")
