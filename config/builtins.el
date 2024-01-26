@@ -15,3 +15,6 @@
 
 ;;; ruby-mode
 (load "builtins/ruby-mode")
+
+;;; js-mode
+(load "builtins/js-mode")
